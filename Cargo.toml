@@ -1,0 +1,50 @@
+[workspace]
+members = [".", "applet", "config"]
+resolver = "2"
+
+# Version shared by the switcher, applet, and configuration crates.
+[workspace.package]
+version = "0.0.1"
+
+[package]
+name = "cosmic-ext-app-switcher"
+version.workspace = true
+edition = "2024"
+homepage = "https://github.com/42wim/cosmic-ext-app-switcher"
+repository = "https://github.com/42wim/cosmic-ext-app-switcher"
+
+[[bin]]
+name = "cosmic-ext-app-switcher"
+path = "src/main.rs"
+
+[dependencies]
+libcosmic = { git = "https://github.com/pop-os/libcosmic", rev = "417923f", default-features = false, features = [
+    "wayland",
+    "tokio",
+    "winit",
+    "multi-window",
+    "wgpu",
+] }
+freedesktop-desktop-entry = "0.5"
+switcher-config = { path = "config" }
+
+wayland-client = "0.31"
+wayland-protocols = { version = "0.32", features = ["client"] }
+gbm = "0.18"
+image = { version = "0.25", default-features = false }
+libc = "0.2"
+calloop = "0.14"
+calloop-wayland-source = { version = "0.4", features = ["log"] }
+
+tokio      = { version = "1", features = ["net", "io-util"] }
+clap       = { version = "4", features = ["derive"] }
+anyhow     = "1"
+log         = "0.4"
+env_logger  = "0.11"
+parking_lot = "0.12"
+
+[profile.release]
+strip     = true
+opt-level = "z"
+lto       = true
+codegen-units = 1

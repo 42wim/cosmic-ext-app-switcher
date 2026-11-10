@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=App Switcher Settings
+Comment=Configure the thumbnail window switcher
+Type=Application
+Exec=cosmic-ext-applet-app-switcher
+Icon=io.github.cosmic-ext-applet-app-switcher-symbolic
+Terminal=false
+NoDisplay=true
+X-CosmicApplet=true
+Categories=COSMIC;
+Keywords=COSMIC;Applet;AppSwitcher;Theme;

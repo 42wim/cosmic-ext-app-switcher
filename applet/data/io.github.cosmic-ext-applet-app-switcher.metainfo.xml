@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>io.github.cosmic-ext-applet-app-switcher</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-3.0-only</project_license>
+  <project_group>COSMIC</project_group>
+  <developer id="io.github.42wim">
+    <name>42wim</name>
+  </developer>
+  <name>App Switcher</name>
+  <summary>Window switcher with live thumbnail previews for COSMIC</summary>
+  <url type="homepage">https://github.com/42wim/cosmic-ext-app-switcher</url>
+  <content_rating type="oars-1.1" />
+  <branding>
+    <color type="primary" scheme_preference="light">#f0f0f0</color>
+    <color type="primary" scheme_preference="dark">#212121</color>
+  </branding>
+  <description>
+    <p>
+      A resident COSMIC window switcher with live thumbnail previews. Press
+      Super+Tab or Alt+Tab to cycle through a balanced grid of up to three rows
+      of open windows. The selected window's icon and title appear directly
+      under its preview, and the page counter shows your position when the list
+      paginates.
+    </p>
+    <p>
+      The panel applet lets you choose Dark, Light, Frosted, or Midnight themes,
+      limit the switcher to the current monitor, and enable or disable the
+      Super+Tab shortcut without using a terminal.
+    </p>
+    <p>
+      Based on the original cosmic-ext-app-switcher by j0rdiun.
+    </p>
+  </description>
+  <icon type="stock">io.github.cosmic-ext-applet-app-switcher-symbolic</icon>
+  <launchable type="desktop-id">io.github.cosmic-ext-applet-app-switcher.desktop</launchable>
+  <provides>
+    <id>com.system76.CosmicApplet</id>
+    <binary>cosmic-ext-applet-app-switcher</binary>
+    <binary>cosmic-ext-app-switcher</binary>
+  </provides>
+  <categories>
+    <category>Utility</category>
+  </categories>
+</component>
